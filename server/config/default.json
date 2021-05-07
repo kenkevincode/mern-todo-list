@@ -1,0 +1,5 @@
+{
+	"serverPort": "4000",
+	"dbUrl": "mongodb+srv://lex:kenken666@todo-list.9sgur.mongodb.net/todo-list?retryWrites=true&w=majority",
+	"secretKey": "lex-todo-list"
+}

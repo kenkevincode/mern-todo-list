@@ -1,0 +1,223 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.mern-todo-list {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
+.navbar {
+	width: 100%;
+	height: 3rem;
+	margin: 1.5rem;
+}
+.navbar-log {
+	margin-left: 1.5rem;
+	font-size: 2rem;
+	font-weight: 1000;
+	color: rgba(234, 131, 255, 0.6);
+	text-decoration: none;
+}
+
+.todolist-auth {
+	margin: 4rem auto;
+	padding: 2rem 3rem 3rem;
+	max-width: 500px;
+	background-color: rgba(234, 131, 255, 0.6);
+	color: #fff;
+	box-shadow: 15px -15px 15px 0px rgba(170, 170, 170, 0.3);
+}
+.todolist {
+	margin: 4rem auto;
+	padding: 2rem 3rem 3rem;
+	max-width: 500px;
+	background-color: rgba(234, 131, 255, 0.6);
+	color: #fff;
+	box-shadow: 15px -15px 15px 0px rgba(170, 170, 170, 0.3);
+}
+
+.todolist-title {
+	text-align: center;
+	font-weight: normal;
+	font-size: 2.6rem;
+	letter-spacing: 0.1rem;
+	margin-bottom: 0.5rem;
+}
+
+.todolist-subtitle {
+	text-align: end;
+	font-weight: normal;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	margin-bottom: 1.5rem;
+}
+
+.todolist-span {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 0.7rem;
+	margin-left: 3px;
+	font-style: italic;
+}
+.todo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.todo-title{
+	display: flex;
+	justify-content:center;
+}
+.todo-index {
+	font-size: 1.5rem;
+}
+.todo-text {
+	font-size:1.5rem;
+	margin-left: .5rem;
+}
+.todo-none {
+	text-align: center;
+	letter-spacing: 0.05em;
+	opacity: 0.8;
+	font-size: 2rem;
+}
+.todo-btns {
+	display: flex;
+	align-items: center;
+}
+
+.todo-checkbox {
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	appearance: none;
+	transform: translatex(-0.2em) translateY(-0.1em) scale(0.9);
+}
+.todo-checkbox::after {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgb(246, 200, 255) center center / 75% 75% no-repeat;
+	border: 2px solid white;
+	border-radius: 20%;
+}
+.todo-checkbox:checked::after {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.completed {
+	text-decoration: line-through;
+	color: rgb(255, 255, 255);
+}
+
+.add-form {
+	margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.add-form_label {
+	min-width: 100%;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+}
+.add-form_input {
+	flex-grow: 1;
+	border: none;
+	background: #f7f1f1;
+	padding: 0 1.5em;
+	font-size: initial;
+	height: 3rem;
+	margin-bottom: 1rem;
+}
+.add-form_button {
+	padding: 0 1.3rem;
+	border: none;
+	background-color: #f5c3ff;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	margin-left: .5rem;
+	cursor: pointer;
+	transition: background 0.2s ease-out;
+	height: 3rem;
+}
+.auth-form_button-login {
+	padding: 0 1.3rem;
+	border: none;
+	background-color: #f5c3ff;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+	transition: background 0.2s ease-out;
+	height: 3rem;
+}
+.auth-form_button-registr {
+	padding: 0 1.3rem;
+	border: none;
+	background-color: #f5c3ff;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	margin-left: .5rem;
+	cursor: pointer;
+	transition: background 0.2s ease-out;
+	height: 3rem;
+}
+.add-form_button:hover {
+	background-color: rgba(234, 131, 255, 0.6);
+}
+.auth-form_button-registr:hover {
+	background-color: rgba(234, 131, 255, 0.6);
+}
+.auth-form_button-login:hover {
+	background-color: rgba(234, 131, 255, 0.6);
+}
+.add-form_input:active,
+:hover,
+:focus {
+	outline: 0;
+	outline-offset: 0;
+}
+
+.login-foter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+.not-account {
+	color: white;
+	text-decoration: none;
+	margin-left: 88.7px;
+}
+
+/* .add-form_input:focus{
+	box-shadow: 5px 5px 5px -5px rgb(219, 42, 255) inset;
+} */
